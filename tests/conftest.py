@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 def browser():
     options = webdriver.ChromeOptions()
     options.add_argument("--window-size=1600,1080")
-    # options.add_argument("--headless=new")
+    options.add_argument("--headless=new")
     browser = webdriver.Chrome(
         service=ChromeService(ChromeDriverManager().install()), options=options
     )
